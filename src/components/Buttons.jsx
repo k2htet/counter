@@ -1,5 +1,5 @@
 import { Stack, Button } from "@mui/material";
-import { useCountContext } from "./context/CountContext";
+import { useCountContext } from "../context/CountContext";
 
 const Buttons = () => {
   const { dispatch } = useCountContext();

@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Stack, TextField, Button, Box, Typography } from "@mui/material";
-import Buttons from "./Buttons";
+import Buttons from "./components/Buttons";
 import { useCountContext } from "./context/CountContext";
 
 const App = () => {
   const { count, dispatch } = useCountContext();
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState(0);
 
   return (
     <Stack
@@ -46,7 +46,7 @@ const App = () => {
             variant="contained"
             size="small"
             onClick={() => {
-              setInput("");
+              setInput(0);
               return dispatch({
                 type: "INIT",
                 payload: input,
